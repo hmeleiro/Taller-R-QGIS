@@ -81,12 +81,11 @@ dev.off()
 source("visualmoran.R") 
 
 # Uso la función para crear conseguir el retardo espacial y los cuadrantes del % de voto a Vox
-p <- visualmoran(p, "VOX", "vx_lg")
+p <- visualmoran(p, ww, "VOX", NA.impute = F)
 
 
 ### EXPORTAR EL SHP
 
 #writeOGR(p, "shapefiles/and_secc_datos/",
 #         driver = "ESRI Shapefile", layer = "andalucia20182", overwrite_layer = T)
-
 
