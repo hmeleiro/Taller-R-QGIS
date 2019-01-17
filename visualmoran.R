@@ -19,7 +19,7 @@ visualmoran <- function(shp, listw, col, NA.impute = F) {
   ### LISA MAP
   # create row-standardized Queens contiguity weights matrix
   
-  locm <- localmoran(p@data[, col], ww, zero.policy = T, na.action = na.exclude)  # Calculo la I de Moran local
+  locm <- localmoran(p@data[, col], ww, zero.policy = T, na.action = na.exclude, alternative = "two.sided")  # Calculo la I de Moran local
   
   nscal <- ncol(p) + 1
   scal <- paste(col, "scale", sep = "_")
