@@ -52,7 +52,7 @@ p@data$VOX[is.na(p@data$VOX) & p@data$cod.prov == "41"] <- mean(p@data$VOX[p@dat
 
 
 # Calculamos la I de Moran global
-moran.test(p@data$VOX, ww, 
+moran.mc(p@data$VOX, ww, nsim = 599, 
            na.action = na.exclude, zero.policy = T) # Esto es lo que habría que poner en las funciones para calcular retardo espacil e I de Moran
 
 # Nos sale una I de Moran bastante elevada (0.673) y significativa al 99%.
