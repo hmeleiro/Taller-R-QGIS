@@ -86,6 +86,6 @@ p <- visualmoran(p, ww, "VOX", NA.impute = F)
 
 ### EXPORTAR EL SHP
 
-#writeOGR(p, "shapefiles/and_secc_datos/",
+#writeOGR(p, "shapefiles/condatos/",
 #         driver = "ESRI Shapefile", layer = "andalucia20182", overwrite_layer = T)
 
